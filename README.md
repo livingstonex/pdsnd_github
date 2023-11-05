@@ -5,10 +5,9 @@ Created on the 5th of October, 2023.
 _A Python project using pandas to explore bikeshare data._
 
 
-
 # Project Overview
 
-This project focusses on using python to analyse and explore bikesahre data collated from three different cities. We would be leveging python modules and libraries such as numpy and pandas for the more data analytical aspects of this exploration.
+This project focuses on using python to analyse and explore bikesahre data collated from three different cities. We would be leveraging python modules and libraries such as numpy and pandas for the more data analytical aspects of this exploration
 
 
 ### Running the program
