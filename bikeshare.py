@@ -233,11 +233,11 @@ def user_stats(df):
 def display_data(df):
     """Displays 5 rows of data from the csv file for the selected city."""
     
-    RESPONSE_LIST = ['yes', 'no']
+    ANS_LIST = ['yes', 'no']
     wants_raw_data = ''
 
     counter = 0
-    while wants_raw_data not in RESPONSE_LIST:
+    while wants_raw_data not in ANS_LIST:
         print("\nDo you want to view the raw data?")
         print("\nAccepted responses:\nYes or yes\nNo or no")
         wants_raw_data = input().lower()
@@ -245,7 +245,7 @@ def display_data(df):
         # Display raw data if user wants it
         if wants_raw_data == "yes":
             print(df.head())
-        elif wants_raw_data not in RESPONSE_LIST:
+        elif wants_raw_data not in ANS_LIST:
             print("\nPlease check your input.")
             print("Input does not seem to match any of the accepted responses.")
             print("\nRestarting...\n")
