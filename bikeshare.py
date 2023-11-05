@@ -230,7 +230,7 @@ def user_stats(df):
     print("\nThis took %s seconds." % (time.time() - start_time))
     print('-'*40)
 
-def display_data(df):
+def display_user_data(df):
     """Displays 5 rows of data from the csv file for the selected city."""
     
     ANS_LIST = ['yes', 'no']
@@ -269,7 +269,7 @@ def main():
         city, month, day = get_filters()
         df = load_data(city, month, day)
 
-        display_data(df)
+        display_user_data(df)
         time_stats(df)
         station_stats(df)
         trip_duration_stats(df)
