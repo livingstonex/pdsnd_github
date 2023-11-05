@@ -235,14 +235,14 @@ def user_stats(df):
     print("\nThis took %s seconds." % (time.time() - start_time))
     print('-'*40)
 
-def display_data(df):
+def display_user_data(df):
     """Displays 5 rows of data from the csv file for the selected city."""
     
-    RESPONSE_LIST = ['yes', 'no']
+    ANS_LIST = ['yes', 'no']
     wants_raw_data = ''
 
     counter = 0
-    while wants_raw_data not in RESPONSE_LIST:
+    while wants_raw_data not in ANS_LIST:
         print("\nDo you want to view the raw data?")
         print("\nAccepted responses:\nYes or yes\nNo or no")
         wants_raw_data = input().lower()
@@ -250,7 +250,7 @@ def display_data(df):
         # Display raw data if user wants it
         if wants_raw_data == "yes":
             print(df.head())
-        elif wants_raw_data not in RESPONSE_LIST:
+        elif wants_raw_data not in ANS_LIST:
             print("\nPlease check your input.")
             print("Input does not seem to match any of the accepted responses.")
             print("\nRestarting...\n")
@@ -274,7 +274,7 @@ def main():
         city, month, day = get_filters()
         df = load_data(city, month, day)
 
-        display_data(df)
+        display_user_data(df)
         time_stats(df)
         station_stats(df)
         trip_duration_stats(df)
